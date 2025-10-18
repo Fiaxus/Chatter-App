@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+/* Header*/
+
+.chat-app-header {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.logo{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+
+.logo h1 {
+    margin: 0;
+    font-size: 25px;
+}
+.online-members{
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: #4c4c4c;
+}
+
+/*Main*/
+
+.chat-app-main{
+    display: flex;
+    flex-direction: column;
+    row-gap: 12.5px;
+    font-size: 15px;
+    padding: 12.5px;
+    justify-content: flex-start;
+    height: 100%;
+    overflow-y: auto;
+}
+.message-received{
+    align-self: flex-start;
+    border-radius: 15px;
+    justify-content: center;
+    padding: 5px 10px;
+    background-color: #eee;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.message-sent{
+    align-self: flex-end;
+    border-radius: 15px;
+    justify-content: center;
+    padding: 5px 10px;
+    background-color: #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.chat-app-main::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-app-main::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.chat-app-main::-webkit-scrollbar-thumb {
+    background: #007bff;
+    border-radius: 12.5px;
+}
+
+.chat-app-main::-webkit-scrollbar-thumb:hover {
+    background: #0056b3;
+}
+
+/*Footer*/
+
+.chat-app-footer{
+    position: sticky;
+    bottom: 12.5px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    column-gap: 12.5px;
+    justify-content: space-between;
+    margin-top: 12.5px;
+    padding-top: 12.5px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+.message-input{
+    display: flex;
+    border-radius: 25px;
+    width: 75%;
+    padding-left: 25px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    margin-left: 10px;
+}
+.message-input:focus{
+    border-color: #007bff ;
+    outline: none;
+
+}
+
+.message-send-button {
+    width: 25%;
+    padding: 15px 25px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.message-send-button:hover{
+    background-color: #0056b3;
+}
+
